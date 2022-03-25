@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap");
 
-$primary-color: #dee0f7;
+$primary-color: #040510;
 $secondary-color: #edf2f8;
 $accent-color: #404bc9;
 $gray-color: #6b7688;
@@ -58,8 +58,8 @@ $font-base: "DM Sans", sans-serif;
 }
 
 .p-text,
-.p-text .light,
-.p-text .dark {
+.light,
+.dark {
   font-size: 0.8rem;
   text-align: left;
   line-height: 1.5;
@@ -68,11 +68,10 @@ $font-base: "DM Sans", sans-serif;
   }
 }
 
-.p-text .light {
+.light {
   color: $light-gray;
 }
-
-.p-text .dark {
+.dark {
   color: $dark-gray;
 }
 
@@ -127,7 +126,7 @@ $font-base: "DM Sans", sans-serif;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: $white-color;
+    background-color: $primary-color;
     margin: 0.25rem 0;
     border: 1px solid $light-gray;
 
@@ -140,7 +139,7 @@ $font-base: "DM Sans", sans-serif;
     svg {
       width: 15px;
       height: 15px;
-      color: $gray-color;
+      color: $light-gray;
     }
 
     &:hover {

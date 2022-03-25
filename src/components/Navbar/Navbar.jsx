@@ -5,9 +5,13 @@ import { links, images } from "../../constants";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="page__navbar">
-      <a className="page__navbar-logo">
+      <a className="page__navbar-logo" onClick={closeMenu}>
         <img src={images.logo} alt="logo" />
       </a>
       <ul className="page__navbar-links">
@@ -31,7 +35,7 @@ function Navbar() {
       <ul className={`page__navbar-menu page__flex ${menuOpen && "active"}`}>
         {links.map((link) => (
           <li key={link.text}>
-            <a className="p-text" href={link.path}>
+            <a className="p-text" href={link.path} onClick={closeMenu}>
               {link.text}
             </a>
           </li>
