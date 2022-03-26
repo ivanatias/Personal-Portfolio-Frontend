@@ -1,0 +1,120 @@
+@use "../../layout/layout" as *;
+
+.page__skills {
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page__skills-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.page__skills-items {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.skill {
+  flex-direction: column;
+  margin: 1rem 1.2rem 1rem 1.2rem;
+
+  p {
+    color: $white-color;
+    margin-bottom: 0.4rem;
+  }
+}
+
+.skill-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $white-color;
+  transition: all 0.4s ease;
+
+  img {
+    width: 70%;
+    object-fit: contain;
+    -o-object-fit: contain;
+  }
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+
+.page__skills-experiences {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.experience {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 40%;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .experience-year {
+    margin-right: 1rem;
+    width: 30%;
+
+    @media screen and (max-width: 1200px) {
+      width: 15%;
+    }
+
+    p {
+      color: $accent-color;
+    }
+  }
+
+  .experience-desc {
+    width: 70%;
+
+    @media screen and (max-width: 1200px) {
+      width: 50%;
+    }
+
+    h4 {
+      color: $white-color;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      color: $white-color;
+    }
+  }
+}
