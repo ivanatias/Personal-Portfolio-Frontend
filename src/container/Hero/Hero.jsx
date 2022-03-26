@@ -3,6 +3,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import { images } from "../../constants";
 import { motion } from "framer-motion";
 
+import { PageWrapper } from "../../wrapper";
+
 import "./hero.scss";
 
 const scaleVariants = {
@@ -18,7 +20,7 @@ const scaleVariants = {
 
 const Hero = () => {
   return (
-    <section id="home" className="page__hero page__flex">
+    <section className="page__hero page__flex">
       <motion.div
         className="page__hero-intro"
         whileInView={{ x: [-120, 0], opacity: [0, 1] }}
@@ -81,4 +83,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default PageWrapper(Hero, "home");
