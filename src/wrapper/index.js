@@ -1,3 +1,4 @@
 import { default as PageWrapper } from "./PageWrapper";
+import { default as MotionWrapper } from "./MotionWrapper";
 
-export { PageWrapper };
+export { PageWrapper, MotionWrapper };

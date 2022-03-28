@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { services } from "../../constants";
 
-import { PageWrapper } from "../../wrapper";
+import { PageWrapper, MotionWrapper } from "../../wrapper";
 
 import "./about.scss";
 
@@ -58,4 +58,8 @@ const About = () => {
   );
 };
 
-export default PageWrapper(About, "about", "page__primarybg");
+export default PageWrapper(
+  MotionWrapper(About, "page__about"),
+  "about",
+  "page__primarybg"
+);

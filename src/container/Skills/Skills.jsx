@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { motion } from "framer-motion";
 
-import { PageWrapper } from "../../wrapper";
+import { PageWrapper, MotionWrapper } from "../../wrapper";
 
 import "./skills.scss";
 
@@ -16,8 +16,6 @@ const Skills = () => {
   const {
     allSanityExperiences: { nodes: experiences },
   } = data;
-
-  console.log(experiences);
 
   return (
     <>
@@ -33,7 +31,7 @@ const Skills = () => {
               key={skill.id}
               className="skill page__flex"
               whileInView={{ scale: [0, 1] }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
             >
               <p className="p-text light">{skill.skill}</p>
               <div className="skill-img page__flex">
@@ -48,7 +46,7 @@ const Skills = () => {
               key={experience.id}
               className="experience"
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
             >
               <div className="experience-year">
                 <p className="bold-text">{experience.year}</p>
@@ -89,4 +87,8 @@ export const query = graphql`
   }
 `;
 
-export default PageWrapper(Skills, "skills", "page__primarybg");
+export default PageWrapper(
+  MotionWrapper(Skills, "page__skills"),
+  "skills",
+  "page__primarybg"
+);

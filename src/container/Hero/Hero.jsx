@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { images } from "../../constants";
 import { motion } from "framer-motion";
 
-import { PageWrapper } from "../../wrapper";
+import { PageWrapper, MotionWrapper } from "../../wrapper";
 
 import "./hero.scss";
 
@@ -83,4 +83,4 @@ const Hero = () => {
   );
 };
 
-export default PageWrapper(Hero, "home");
+export default PageWrapper(MotionWrapper(Hero, "page__hero"), "home");
