@@ -14,6 +14,8 @@ import figma from "../images/figma.png";
 import git from "../images/git.png";
 import materialui from "../images/materialui.png";
 import nextjs from "../images/nextjs.png";
+import contact from "../images/contact.svg";
+import emailsent from "../images/emailsent.svg";
 
 export default {
   profile,
@@ -32,4 +34,6 @@ export default {
   git,
   materialui,
   nextjs,
+  contact,
+  emailsent,
 };

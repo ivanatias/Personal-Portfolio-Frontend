@@ -1,0 +1,146 @@
+@use "../../layout/layout" as *;
+
+.page__contact-emailBadge {
+  width: 100%;
+  margin: 2rem 0;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    border: 1px solid $light-gray;
+    border-radius: 0.7rem;
+    width: 100%;
+    max-width: 350px;
+
+    img {
+      width: 80px;
+
+      @media screen and (min-width: 2000px) {
+        width: 150px;
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      max-width: 550px;
+    }
+  }
+}
+
+.page__contact-formContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-form {
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+
+  h2 {
+    color: $white-color;
+    text-align: center;
+  }
+}
+
+.contact-fields {
+  width: 100%;
+  flex-direction: column;
+
+  input {
+    width: 100%;
+    max-width: 400px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $white-color;
+    margin: 0.8rem 0;
+    padding: 1rem 0.5rem;
+    color: $white-color;
+
+    &::placeholder {
+      color: $light-gray;
+    }
+
+    @media screen and (min-width: 2000px) {
+      max-width: 550px;
+    }
+  }
+
+  small {
+    display: flex;
+    justify-self: flex-start;
+    padding: 0 0.5rem;
+    width: 100%;
+    max-width: 400px;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 0.8rem;
+      max-width: 550px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: 1px solid $white-color;
+    margin-top: 1.5rem;
+    color: $white-color;
+    padding: 1rem 0.5rem;
+
+    &::placeholder {
+      color: $light-gray;
+    }
+
+    @media screen and (min-width: 2000px) {
+      max-width: 550px;
+    }
+  }
+
+  button {
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    border: none;
+    background-color: $accent-color;
+    padding: 1rem;
+    color: $white-color;
+    border-radius: 0.7rem;
+    margin-top: 1.5rem;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @media screen and (min-width: 2000px) {
+      max-width: 550px;
+    }
+  }
+}
+
+.page__contact-messageSent {
+  flex-direction: column;
+  width: 100%;
+
+  h1 {
+    margin: 0 0 1rem 0;
+  }
+
+  img {
+    width: 100px;
+
+    @media screen and (min-width: 2000px) {
+      width: 250px;
+    }
+  }
+}

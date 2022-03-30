@@ -61,6 +61,16 @@
   &:hover {
     background-color: $light-gray;
   }
+
+  @media screen and (min-width: 2000px) {
+    width: 120px;
+    height: 120px;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .page__skills-experiences {
