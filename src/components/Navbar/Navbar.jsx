@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.scss";
 import { links, images } from "../../constants";
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,6 +41,32 @@ function Navbar() {
             </a>
           </li>
         ))}
+
+        <div className="page__social-mobileMenu">
+          <div>
+            <a
+              href="https://github.com/ivanatias"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillGithub />
+            </a>
+          </div>
+          <div>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <AiFillLinkedin />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://instagram.com/ivanatias"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillInstagram />
+            </a>
+          </div>
+        </div>
       </ul>
     </nav>
   );
