@@ -52,17 +52,43 @@
 
   .item-browser {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    min-height: 25px;
+    min-height: 45px;
 
-    div {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      margin: 0.4rem;
-      background-color: $white-color;
+    .item-browser-dots {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      div {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        margin: 0 0.4rem 0 0.5rem;
+        background-color: $white-color;
+      }
+    }
+
+    .item-browser-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      a {
+        margin: 0 0.4rem;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid $light-gray;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $accent-color;
+          border: 1px solid $accent-color;
+        }
+      }
     }
   }
 
@@ -96,10 +122,18 @@
     h3 {
       color: $white-color;
       margin-top: 1.5rem;
+
+      @media screen and (min-width: 2000px) {
+        margin-top: 3rem;
+      }
     }
   }
 
   &:hover {
-    transform: scale(1.05);
+    border: 1px solid $accent-color;
+  }
+
+  @media screen and (min-width: 2000px) {
+    max-width: 500px;
   }
 }

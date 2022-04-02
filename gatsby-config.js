@@ -4,8 +4,22 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `new`,
-    siteUrl: `https://www.yourdomain.tld`,
+    defaultTitle: `Ivan Atias`,
+    defaultTitleTemplate: `%s · Frontend Developer, UI Designer & Digital Marketer`,
+    defaultDescription: `This is Ivan Atias' Personal Portfolio. Frontend Developer, UI Designer and Digital Marketer. Know more about him!`,
+    siteUrl: `https://www.ivanatias.dev`,
+    defaultKeyWords: [
+      `Frontend`,
+      `Developer`,
+      `UI`,
+      `Designer`,
+      `Marketing`,
+      `ReactJS`,
+      `GatsbyJS`,
+      `NextJS`,
+    ],
+    lang: `en`,
+    // defaultImage: Put an Image for Ivan Atias Website's  link sharing
   },
   plugins: [
     {
@@ -27,6 +41,18 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ivan Atias Portfolio`,
+        short_name: `Ivan Atias`,
+        start_url: `/`,
+        background_color: `#040510`,
+        theme_color: `#040510`,
+        display: `standalone`,
+        icon: `src/images/Logo.svg`,
+      },
     },
   ],
 };

@@ -6,7 +6,7 @@ const IndexLayout = ({ children }) => {
   return (
     <>
       <Navbar />
-      {children}
+      <main>{children}</main>
     </>
   );
 };

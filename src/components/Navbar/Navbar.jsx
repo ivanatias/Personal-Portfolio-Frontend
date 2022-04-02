@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <nav className="page__navbar">
-      <a className="page__navbar-logo" onClick={closeMenu}>
+      <a href="#home" className="page__navbar-logo" onClick={closeMenu}>
         <img src={images.logo} alt="logo" />
       </a>
       <ul className="page__navbar-links">

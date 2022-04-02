@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineLink } from "react-icons/ai";
+
 import { PageWrapper, MotionWrapper } from "../../wrapper";
 
 import "./projects.scss";
@@ -75,9 +78,29 @@ const Projects = () => {
           filterWork.map((work) => (
             <div key={work.id} className="page__projects-item">
               <div className="item-browser">
-                <div />
-                <div />
-                <div />
+                <div className="item-browser-dots">
+                  <div />
+                  <div />
+                  <div />
+                </div>
+                <div className="item-browser-links">
+                  <a
+                    className="page__flex"
+                    href={work.codeLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillGithub size={20} color="white" />
+                  </a>
+                  <a
+                    className="page__flex"
+                    href={work.projectLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiOutlineLink size={20} color="white" />
+                  </a>
+                </div>
               </div>
               <div className="item-imgContainer">
                 <GatsbyImage
